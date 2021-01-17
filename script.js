@@ -1,6 +1,8 @@
 const numbuttons = document.querySelectorAll('.btnnum')
 const display = document.querySelector('.display')
 const clear = document.querySelector('.btn-clear')
+const operatorsbtns = document.querySelectorAll('.btnoperator')
+const equals = document.querySelector('.btnequals')
 
 
 numbuttons.forEach(btn => {
@@ -11,6 +13,18 @@ numbuttons.forEach(btn => {
         appenddisplay(btn.textContent)
     });
 });
+
+operatorsbtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+        console.log(btn.textContent)
+        appenddisplay(btn.textContent)
+    })
+})
+
+equals.addEventListener('click', e => {
+    console.log(operate)
+    console.log(operate(operatorsbtns, numbuttons))
+})
 
 function appenddisplay(num) {
     display.textContent += num
