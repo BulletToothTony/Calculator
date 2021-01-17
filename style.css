@@ -1,0 +1,41 @@
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(0, 197, 187), rgb(0, 132, 255));
+}
+
+h1 {
+    padding-bottom: 25px;
+}
+
+.calculator {
+    border: 2px solid black;
+    background: cadetblue;
+    height: 400px;
+    width: 300px;
+}
+
+.display {
+    border: 2px solid red;
+    height: 75px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid green;
+    height: 250px;
+}
+
+button {
+    cursor: pointer;
+}
