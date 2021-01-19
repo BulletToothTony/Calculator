@@ -5,6 +5,10 @@ const operatorsbtns = document.querySelectorAll('.btnoperator')
 const equals = document.querySelector('.btnequals')
 
 
+let currentop = '';
+let firstarg = '';
+let secondarg = '';
+
 numbuttons.forEach(btn => {
     btn.addEventListener('click', e => {
         console.log(btn.textContent)
@@ -18,8 +22,23 @@ operatorsbtns.forEach(btn => {
     btn.addEventListener('click', e => {
         console.log(btn.textContent)
         appenddisplay(btn.textContent)
+        setOperation(btn.textContent)
     })
 })
+
+function setOperation(operator) {
+    if (currentop !== null) runeval();
+    currentop = operator
+    console.log('current ' + currentop)
+    // clearfunc()
+}
+
+function runeval() {
+    if (currentop == '/' && display.textContent == "0") {
+        alert(`You really think we'd let you divide by zero?`)
+    }
+}
+
 
 equals.addEventListener('click', e => {
     console.log(operate)
@@ -35,7 +54,7 @@ clear.addEventListener('click', e => {
 })
 
 function clearfunc() {
-    location.reload()
+    display.textContent = 0
 }
 
 
@@ -57,7 +76,11 @@ function multiply (a,b) {
 }
 
 function divide (a,b) {
+    if (b == 0) {
+        alert(`You can't divide by zero`)
+    } else {
     return a / b;
+    }
 }
 
 function operate(operator, num1,num2) {
