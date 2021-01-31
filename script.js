@@ -9,6 +9,8 @@ let currentop = '';
 let currentnum = '';
 let num1 = '';
 let num2 = '';
+console.log(num1)
+console.log(num2)
 
 function storenum() {
     if (currentop == '') {
@@ -53,7 +55,10 @@ function runeval() {
 
 equals.addEventListener('click', e => {
     console.log(operate)
-    console.log(operate(operatorsbtns, numbuttons))
+    tot = operate(operatorsbtns, num1, num2)
+    console.log(tot)
+    console.log(num1)
+    console.log(num2)
 })
 
 function appenddisplay(num) {
@@ -65,6 +70,7 @@ clear.addEventListener('click', e => {
 })
 
 function clearfunc() {
+    //need to set everything back to beginning. e.g. firstnum = ''
     display.textContent = 0
 }
 
