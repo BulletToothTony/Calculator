@@ -6,8 +6,17 @@ const equals = document.querySelector('.btnequals')
 
 
 let currentop = '';
-let firstarg = '';
-let secondarg = '';
+let currentnum = '';
+let num1 = '';
+let num2 = '';
+
+function storenum() {
+    if (currentop == '') {
+        num1 = currentnum;
+    } else {
+        num2 = currentnum;
+    }
+}
 
 numbuttons.forEach(btn => {
     btn.addEventListener('click', e => {
@@ -15,6 +24,8 @@ numbuttons.forEach(btn => {
         displayvalue = btn.textContent
         // display.innerHTML = displayvalue;
         appenddisplay(btn.textContent)
+        currentnum = displayvalue
+        storenum()
     });
 });
 
@@ -56,11 +67,6 @@ clear.addEventListener('click', e => {
 function clearfunc() {
     display.textContent = 0
 }
-
-
-
-
-
 
 
 
