@@ -9,9 +9,18 @@ let currentop = '';
 let currentnum = '';
 let num1 = '';
 let num2 = '';
-
+//12 + 7 - 5 * 3 = should yield 42
 
 function storenum() {
+
+
+    // if (num1 != '' && num2 != '' && currentop != '') {
+    //     tot1 = operate(currentop, num1, num2)
+    //     num1 = tot1
+    //     appenddisplay(num1)
+    //     num1 = tot1
+    // }
+
     if (currentop == '') {
         num1 += currentnum;
     } else {
