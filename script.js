@@ -9,8 +9,7 @@ let currentop = '';
 let currentnum = '';
 let num1 = '';
 let num2 = '';
-console.log(num1)
-console.log(num2)
+
 
 function storenum() {
     if (currentop == '') {
@@ -26,7 +25,7 @@ numbuttons.forEach(btn => {
         displayvalue = btn.textContent
         // display.innerHTML = displayvalue;
         appenddisplay(btn.textContent)
-        currentnum = displayvalue
+        currentnum = displayvalue;
         storenum()
     });
 });
@@ -40,8 +39,21 @@ operatorsbtns.forEach(btn => {
 })
 
 function setOperation(operator) {
-    if (currentop !== null) runeval();
-    currentop = operator
+    if (currentop !== null) {runeval();}
+    // currentop = operator
+    console.log('currentting op' + currentop)
+
+    if (operator == '+') {
+        currentop = add;
+    } else if (operator == '*') {
+        currentop = multiply;
+    } else if (operator =='-') {
+        currentop = subtract
+    } else if (operator == '/') {
+        currentop = divide
+    }
+
+
     console.log('current ' + currentop)
     // clearfunc()
 }
@@ -54,15 +66,17 @@ function runeval() {
 
 
 equals.addEventListener('click', e => {
-    console.log(operate)
-    tot = operate(operatorsbtns, num1, num2)
+    num1 = parseInt(num1)
+    num2 = parseInt(num2)
+    tot = operate(currentop, num1, num2)
+    runeval()
+    // tot = operate(currentop, num1, num2)
     console.log(tot)
-    console.log(num1)
-    console.log(num2)
+    appenddisplay(tot)
 })
 
 function appenddisplay(num) {
-    display.textContent += num
+    display.textContent += num + "\n"
 }
 
 clear.addEventListener('click', e => {
@@ -71,7 +85,12 @@ clear.addEventListener('click', e => {
 
 function clearfunc() {
     //need to set everything back to beginning. e.g. firstnum = ''
-    display.textContent = 0
+    display.textContent = '';
+    currentop = '';
+    currentnum = '';
+    num1 = '';
+    num2 = '';
+    console.log(num1)
 }
 
 
