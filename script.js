@@ -13,9 +13,9 @@ let num2 = '';
 
 function storenum() {
     if (currentop == '') {
-        num1 = currentnum;
+        num1 += currentnum;
     } else {
-        num2 = currentnum;
+        num2 += currentnum;
     }
 }
 
