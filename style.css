@@ -1,8 +1,11 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 html {
     padding: 0;
     margin: 0;
     height: 100%;
-
 }
 
 body {
@@ -10,31 +13,39 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-content: center;
     background: linear-gradient(to right, rgb(0, 197, 187), rgb(0, 132, 255));
 }
 
 h1 {
-    padding-bottom: 25px;
+    font-size: 6rem;
+    padding-bottom: 4rem;
 }
 
 .calculator {
-    border: 2px solid black;
-    background: cadetblue;
-    height: 400px;
-    width: 300px;
+    border: 5px solid black;
+    background: rgb(151, 151, 151);
+    height: 600px;
+    width: 450px;
 }
 
 .display {
-    border: 2px solid red;
-    height: 75px;
+    font-size: 4rem;
+    border: 2px solid black;
+    height: 8rem;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border: 2px solid green;
-    height: 250px;
+    grid-template-rows: repeat(6, 1fr);
+    height: 29.25rem;
 }
+
+.btn-clear {
+    grid-column: 1 / span 3;
+    grid-row: 6 / span 6;
+  }
 
 button {
     cursor: pointer;
