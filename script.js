@@ -6,9 +6,11 @@ const equals = document.querySelector('.btnequals')
 
 
 let currentop = '';
+let nextop = '';
 let currentnum = '';
 let num1 = '';
 let num2 = '';
+let tot = ''
 //12 + 7 - 5 * 3 = should yield 42
 
 function storenum() {
@@ -47,9 +49,16 @@ operatorsbtns.forEach(btn => {
         console.log(btn.textContent)
         appenddisplay(btn.textContent)
         setOperation(btn.textContent)
-        if (currentop != '' && num2 != '' || num2 != '') {
-            num1num2op()
-            console.log(num1)
+        if (num1 != '' && num2 != '' && currentop != '') {
+            // appenddisplay(btn.textContent)
+            // setOperation(btn.textContent)
+            num1 = parseInt(num1)
+            num2 = parseInt(num2)
+            tot = operate(currentop, num1, num2)
+            appenddisplay(tot)
+            num1 = tot
+            num2 = ''
+            console.log(num1 + "num1")
             console.log(num2 + 'num2')
             console.log(tot + 'tottt')
 
@@ -93,6 +102,7 @@ function num1num2op() {
     // display.textContent += ("<br>");
     clearfunc();
     num1 = tot;
+    num2 = '';
     appenddisplay(tot)
 }
 
