@@ -13,6 +13,9 @@ let num2 = '';
 
 function storenum() {
 
+    // 12 + 7 - 5 * 3 = should yield 42. on second click of operator, run eval, 
+
+
 
     // if (num1 != '' && num2 != '' && currentop != '') {
     //     tot1 = operate(currentop, num1, num2)
@@ -44,6 +47,13 @@ operatorsbtns.forEach(btn => {
         console.log(btn.textContent)
         appenddisplay(btn.textContent)
         setOperation(btn.textContent)
+        if (currentop != '' && num2 != '' || num2 != '') {
+            num1num2op()
+            console.log(num1)
+            console.log(num2 + 'num2')
+            console.log(tot + 'tottt')
+
+        }
     })
 })
 
@@ -73,15 +83,22 @@ function runeval() {
     }
 }
 
-
-equals.addEventListener('click', e => {
+function num1num2op() {
     num1 = parseInt(num1)
     num2 = parseInt(num2)
     tot = operate(currentop, num1, num2)
     runeval()
     // tot = operate(currentop, num1, num2)
     console.log(tot)
+    // display.textContent += ("<br>");
+    clearfunc();
+    num1 = tot;
     appenddisplay(tot)
+}
+
+
+equals.addEventListener('click', e => {
+    num1num2op()
 })
 
 function appenddisplay(num) {
