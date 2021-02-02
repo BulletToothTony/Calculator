@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     align-content: center;
-    background: linear-gradient(to right, rgb(0, 197, 187), rgb(0, 132, 255));
+    background: linear-gradient(to right, rgb(255, 72, 0), rgb(252, 172, 0));
 }
 
 h1 {
@@ -23,19 +23,21 @@ h1 {
 }
 
 .calculator {
-    border: 5px solid black;
-    background: rgb(151, 151, 151);
+    border: 8px solid rgb(37, 37, 37);
+    background: rgb(148, 148, 148);
     height: 600px;
     width: 450px;
 }
 
 .display {
     font-size: 4rem;
-    border: 2px solid black;
+    border: 5px solid black;
     height: 8rem;
 }
 
 .buttons {
+    padding: 0;
+    /* border-radius: 50px; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(6, 1fr);
