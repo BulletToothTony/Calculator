@@ -97,7 +97,6 @@ function num1num2op() {
     num2 = parseInt(num2)
     tot = operate(currentop, num1, num2)
     runeval()
-    // tot = operate(currentop, num1, num2)
     console.log(tot)
     // display.textContent += ("<br>");
     clearfunc();
@@ -123,9 +122,11 @@ function clearfunc() {
     //need to set everything back to beginning. e.g. firstnum = ''
     display.textContent = '';
     currentop = '';
+    nextop = '';
     currentnum = '';
     num1 = '';
     num2 = '';
+    // tot = ''
     console.log(num1)
 }
 

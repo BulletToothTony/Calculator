@@ -33,6 +33,14 @@ h1 {
     font-size: 4rem;
     border: 5px solid black;
     height: 8rem;
+    background-color: rgb(148, 168, 206);
+}
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 2.5rem;
+
 }
 
 .buttons {
@@ -44,11 +52,20 @@ h1 {
     height: 29.25rem;
 }
 
+.btnnum {
+    background-color: #001f3f
+}
+
+.btnoperator {
+    background-color: #0074D9;
+}
+
+.btnequals {
+    background-color: #7FDBFF;
+}
+
 .btn-clear {
     grid-column: 1 / span 3;
     grid-row: 6 / span 6;
+    background-color: cornflowerblue;
   }
-
-button {
-    cursor: pointer;
-}
