@@ -7,6 +7,7 @@ const equals = document.querySelector('.btnequals')
 
 let currentop = '';
 let nextop = '';
+let prevop = '';
 let currentnum = '';
 let num1 = '';
 let num2 = '';
@@ -52,8 +53,15 @@ operatorsbtns.forEach(btn => {
         if (num1 != '' && num2 != '' && currentop != '') {
             // appenddisplay(btn.textContent)
             // setOperation(btn.textContent)
+            prevop = currentop;
+            btn.addEventListener('click', e => {
+                console.log('prevvv' + prevop)
+                console.log(e + 'nested click')
+                
+            })
             num1 = parseInt(num1)
             num2 = parseInt(num2)
+            // when second op is click it changes current op, which is why 12+7-5 does minus 7
             tot = operate(currentop, num1, num2)
             appenddisplay(tot)
             num1 = tot
