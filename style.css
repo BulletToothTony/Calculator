@@ -20,6 +20,7 @@ body {
 h1 {
     font-size: 6rem;
     padding-bottom: 2rem;
+    text-align: center;
 }
 
 .calculator {
@@ -69,4 +70,79 @@ button {
     grid-column: 1 / span 3;
     grid-row: 6 / span 6;
     background-color: cornflowerblue;
+    /* test comment */
   }
+
+/* Media queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    h1 {font-size: 2.5rem;
+        text-align: center;
+    }
+    .calculator {
+        height: 450px;
+        width: 300px;
+    }
+
+    .buttons {
+        height: 310px;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    h1 {font-size: 3.5rem;
+        text-align: center;
+    }
+    .calculator {
+        height: 500px;
+        width: 400px;
+    }
+
+    .buttons {
+        height: 360px;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    h1 {font-size: 3.5rem;
+        text-align: center;
+    }
+    .calculator {
+        height: 500px;
+        width: 400px;
+    }
+
+    .buttons {
+        height: 360px;
+    }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    h1 {font-size: 5rem;
+        text-align: center;
+    }
+    .calculator {
+        height: 650px;
+        width: 450px;
+    }
+
+    .buttons {
+        height: 510px;
+    } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    h1 {font-size: 5.5rem;
+        text-align: center;
+    }
+    .calculator {
+        height: 650px;
+        width: 450px;
+    }
+
+    .buttons {
+        height: 510px;
+    } 
