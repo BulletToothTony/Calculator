@@ -28,6 +28,7 @@ h1 {
     background: rgb(148, 148, 148);
     height: 600px;
     width: 450px;
+    border-radius: 5px;
 }
 
 .display {

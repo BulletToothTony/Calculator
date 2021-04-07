@@ -172,7 +172,18 @@ function operate(operator, num1,num2) {
 }
 
 
-
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 37) {
+        // alert('Left was pressed');
+        displayvalue = 1;
+        appenddisplay(1)
+        currentnum = displayvalue;
+        storenum()
+    }
+    else if(event.keyCode == 39) {
+        alert('Right was pressed');
+    }
+});
 
 
 
