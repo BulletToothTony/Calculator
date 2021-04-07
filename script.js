@@ -173,16 +173,94 @@ function operate(operator, num1,num2) {
 
 
 document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 37) {
+    if(event.keyCode == 49) {
         // alert('Left was pressed');
         displayvalue = 1;
         appenddisplay(1)
         currentnum = displayvalue;
         storenum()
     }
-    else if(event.keyCode == 39) {
-        alert('Right was pressed');
+    else if(event.keyCode == 50) {
+        displayvalue = 2;
+        appenddisplay(2)
+        currentnum = displayvalue;
+        storenum()
     }
+    else if(event.keyCode == 51) {
+        displayvalue = 3;
+        appenddisplay(3)
+        currentnum = displayvalue;
+        storenum()
+    }
+    else if(event.keyCode == 52) {
+        displayvalue = 4;
+        appenddisplay(4)
+        currentnum = displayvalue;
+        storenum()
+    }
+    else if(event.keyCode == 53) {
+        displayvalue = 5;
+        appenddisplay(5)
+        currentnum = displayvalue;
+        storenum()
+    }
+    else if(event.keyCode == 54) {
+        displayvalue = 6;
+        appenddisplay(6)
+        currentnum = displayvalue;
+        storenum()
+    }
+    else if(event.keyCode == 55) {
+        displayvalue = 7;
+        appenddisplay(7)
+        currentnum = displayvalue;
+        storenum()
+    }
+    else if(event.keyCode == 56) {
+        displayvalue = 8;
+        appenddisplay(8)
+        currentnum = displayvalue;
+        storenum()
+    }
+    else if(event.keyCode == 57) {
+        displayvalue = 9;
+        appenddisplay(7)
+        currentnum = displayvalue;
+        storenum()
+    }
+
+    // Operators
+    else if(event.key == '-') {
+        displayvalue = '-';
+        appenddisplay('-')
+        setOperation('-');
+    }
+    else if(event.key == '+') {
+        displayvalue = '+';
+        appenddisplay('+')
+        setOperation('+');
+    }
+    else if(event.key == '/') {
+        displayvalue = '/';
+        appenddisplay('/')
+        setOperation('/');
+    }
+    else if(event.key == '*') {
+        displayvalue = '*';
+        appenddisplay('*')
+        setOperation('*');
+    }
+
+    // Equals
+    else if(event.keyCode == 13) {
+        num1num2op()
+    }
+
+    // Clear
+    else if(event.keyCode == 67) {
+        clearfunc();
+    }
+
 });
 
 
