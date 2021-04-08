@@ -245,7 +245,7 @@ document.addEventListener('keydown', function(event) {
         appenddisplay('/')
         setOperation('/');
     }
-    else if(event.key == '*') {
+    else if(event.key == '#') {
         displayvalue = '*';
         appenddisplay('*')
         setOperation('*');
