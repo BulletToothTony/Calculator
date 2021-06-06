@@ -50,7 +50,7 @@ operatorsbtns.forEach(btn => {
         console.log(btn.textContent)
         appenddisplay(btn.textContent)
         setOperation(btn.textContent)
-        if (num1 != '' && num2 != '' && currentop != '') {
+        if (num1 !== '' && num2 !== '' && currentop !== '') {
             // appenddisplay(btn.textContent)
             // setOperation(btn.textContent)
             prevop = currentop;
@@ -63,6 +63,7 @@ operatorsbtns.forEach(btn => {
             num2 = parseInt(num2)
             // when second op is click it changes current op, which is why 12+7-5 does minus 7
             tot = operate(currentop, num1, num2)
+            display.textContent = '';
             appenddisplay(tot)
             num1 = tot
             num2 = ''
